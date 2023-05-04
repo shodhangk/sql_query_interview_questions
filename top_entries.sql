@@ -13,3 +13,8 @@ SELECT DISTINCT Salary FROM EmployeePosition E1
 /*retrieve Departments who have less than 2 employees working in it.*/
 
 SELECT DEPARTMENT, COUNT(EmpID) as 'EmpNo' FROM EmployeeInfo GROUP BY DEPARTMENT HAVING COUNT(EmpD) < 2;
+
+retrieve EmpPostion along with total salaries paid for each of them.
+
+SELECT EmpPosition, SUM(Salary) from EmployeePosition GROUP BY EmpPosition;
+
